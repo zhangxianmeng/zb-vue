@@ -1,0 +1,91 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+
+.bg-wap
+  position: relative
+  background: url(./img/bg1.jpg) no-repeat top center, url(./img/bg2.jpg) no-repeat top center
+  padding: 1100px 0 140px
+  overflow: hidden
+  text-align center
+  .content
+    width 1200px
+    margin 0 auto
+    .sec1
+      padding 0 40px
+      .item
+        float left
+        width 240px
+        height 400px
+        margin 0 20px
+        overflow hidden
+        cursor pointer
+        b
+          color #ffcb09
+        .i-top
+          line-height: 60px
+          font-size: 22px
+          color: #fff
+        .i-tit
+          margin-top: 180px
+          color: #fff
+          font-size: 18px
+          line-height: 3
+        .i-num
+          text-decoration underline
+          color #088fdc
+
+      .item1
+        background url('./img/item1.jpg') no-repeat center
+      .item2
+        background url('./img/item2.jpg') no-repeat center
+      .item3
+        background url('./img/item3.jpg') no-repeat center
+      .item4
+        background url('./img/item4.jpg') no-repeat center
+    .rule
+      line-height: 2.5;
+      width: 1000px;
+      margin: 0 auto;
+      text-align: left
+      font-size 24px
+      color #fff
+      img
+        margin: 180px 0 80px;
+
+@media screen and (max-width: 767px)
+  body
+    background: #ebbc78
+    color: #fff
+    font-size: 35px
+    text-align: center
+    .bg-wap.main
+      background: url(./img/bgm.jpg) no-repeat top center #ebbc78
+      padding-top: 60%
+      overflow: hidden
+      padding-bottom: 60px
+      background-size: contain
+      .content
+        width: 100%;
+        .sec1
+          overflow-x: auto;
+          padding 0
+          .wrap
+            width: 2000px;
+          .item
+            margin: 0 auto 10px;
+            height: 300px;
+            width 210px
+            background-size: contain;
+            .i-top
+              font-size: 19px;
+              line-height: 47px;
+            .i-tit
+              margin-top 110px
+              font-size 15px
+
+        .rule
+          width: 90%;
+          font-size: 20px;
+          img
+            width: 100%;
+            margin: 20px 0;

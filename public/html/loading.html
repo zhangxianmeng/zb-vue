@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <title>加载中...</title>
+  <link rel="stylesheet" href="../css/loading.css">
+</head>
+<body>
+<div class="loading-wrapper">
+  <div>
+    <img class="loading-logo" src="../images/logo-ico.png" alt="">
+    <img class="loading-text" src="../images/logo-text.png" alt="">
+  </div>
+</div>
+<script>
+  var timer = setTimeout(function () {
+    alert('系统繁忙，请稍后重试')
+    window.close()
+    timer = null
+  }, 10000)
+</script>
+</body>
+</html>

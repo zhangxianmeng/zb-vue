@@ -1,0 +1,35 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.service
+  mobile-wrapper()
+  background #eee
+  .m-list
+    background $color-light
+    li
+      &.active
+        .icon-arrow
+          transform rotate(90deg)
+      .tit
+        display flex
+        justify-content space-between
+        align-items center
+        line-height 40px
+        m-wrapper()
+        border-bottom 1px solid $color-border-gray
+        .icon-badge-shit
+          display inline-block
+          width 25px
+          margin-right 5px
+          font-size 20px
+          vertical-align middle
+          color $color-blue-mobile
+        .icon-arrow
+          transition all .3s ease-in
+
+      .sub
+        padding 20px
+        background $color-dark-gray
+        line-height 21px
+        img
+          max-width 100%
+          margin-bottom 10px

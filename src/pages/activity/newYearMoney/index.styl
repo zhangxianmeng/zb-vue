@@ -1,0 +1,55 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+
+.bg-wap
+  position: relative
+  background: url(./img/bg1.jpg) no-repeat top center, url(./img/bg2.jpg) no-repeat top center
+  padding: 648px 0 100px
+  overflow: hidden
+  text-align center
+  .status
+    width 1360px
+    margin 0 auto
+  .handle
+    span
+      text-decoration underline
+      color #fff100
+      font-size: 18px
+      line-height: 3
+
+  .rule
+    width 980px
+    margin 60px auto 0
+    color #fff
+    img
+      margin-bottom 20px
+    p
+      text-align left
+      font-size: 19px;
+      line-height: 2;
+      color #f5e3a1
+
+
+@media screen and (max-width: 767px)
+  body
+    background: #0c0534
+    color: #fff
+    font-size: 35px
+    text-align: center
+    .bg-wap.main
+      background: url(./img/bgm.jpg) no-repeat top center #b0271a
+      padding-top: 220px
+      overflow: hidden
+      padding-bottom: 60px
+      background-size: contain
+      .handle
+        img
+          width 60%
+
+      .rule
+        width: 90%
+        margin 0 auto
+        font-size: 20px
+        img
+          width: 100%
+          margin: 20px 0

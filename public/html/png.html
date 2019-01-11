@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PNG游戏</title>
+</head>
+<body>
+<script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>
+<script>
+  "use strict";
+
+
+  function getQueryString(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  function ajaxRequst(url, type, params) {
+    return new Promise(function (res) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(type, url, true);
+      xhr.setRequestHeader("Content-type", "application/json;charset=utf-8");
+      xhr.send(JSON.stringify(params));
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var result = xhr.responseText;
+          result = eval('(' + result + ')');
+          res(result);
+        }
+      };
+    });
+  }
+
+  var token = getQueryString('tokenForTopic');
+  var gameCode = getQueryString('gameCode');
+  var id = getQueryString('id');
+  var lobby = getQueryString('lobby');
+  var platform = getQueryString('platform');
+  var playMode = getQueryString('playMode');
+
+  var gameReqData = {
+    data: {
+      gameCode: gameCode,
+      id: id,
+      lobby: lobby,
+      platform: platform,
+      playMode: playMode
+    }
+  };
+
+  ajaxRequst('/1.0/checkLogin', 'post', {data: {token: token}}).then(function (res) {
+    if (res.code === '0' || res.code === '10000') {
+      ajaxRequst('/1.0/gamePNGH5Login', 'post', gameReqData).then(function (res) {
+        if (res.code === '0' || res.code === '10000') {
+          window.location.href = res.data
+        } else {
+          alert('进入游戏失败：' + res.message);
+          window.close();
+        }
+      });
+    } else {
+      alert('进入游戏失败：' + res.message);
+      window.close();
+    }
+  });
+
+</script>
+</body>
+</html>

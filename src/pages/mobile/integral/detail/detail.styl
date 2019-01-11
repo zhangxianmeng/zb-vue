@@ -1,0 +1,62 @@
+@import '~common/stylus/mixin'
+@import '~common/stylus/variable'
+.integral-detail
+  line-height 21px
+  background #eee
+  mobile-wrapper()
+  .banner
+    height 200px
+    display flex
+    justify-content center
+    align-items center
+    border-bottom 1px solid #eee
+    background $color-light
+    img
+      height 80%
+  .describe
+    background $color-light
+    padding 10px 10px
+    .name
+      font-size 18px
+    .summary
+      margin 3px 0
+    .current-point
+      font-size 18px
+    .level
+      margin-top 5px
+      img
+        width 30px
+      .level-text
+        margin 0 8px
+      .useful
+        background $color-intersperse
+        color $color-light
+        padding 3px 12px
+        border-radius 3px
+
+  .bar
+    background $color-light
+    line-height 32px
+    display flex
+    justify-content space-between
+    m-wrapper()
+    margin 6px 0
+  .property
+    padding 10px
+    background $color-light
+    .property-list
+      margin-top 8px
+      clearfix()
+      a
+        float left
+        background #eee
+        border-radius 3px
+        padding 0 10px
+        line-height 28px
+        margin-right 8px
+        margin-bottom 8px
+        &.active
+          background $color-danger
+          color $color-light
+  .btn-wrapper
+    margin-top 10px

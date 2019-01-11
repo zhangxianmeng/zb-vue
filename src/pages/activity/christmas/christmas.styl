@@ -1,0 +1,137 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+
+.chris
+  color #555550
+  font-size 19px
+  line-height 2
+.bg-wap
+  position: relative
+  background: url(./img/j-bg.jpg) no-repeat top center
+  padding: 648px 0 100px
+  overflow: hidden
+  text-align center
+  .s-1
+    position relative
+    padding 110px 80px 0
+    margin-bottom 40px
+    height: 780px 
+    width: 1000px 
+    margin: 0 auto 50px 
+    background url("./img/line-1.png") no-repeat center
+    padding 110px 45px 0
+    p
+      line-height 4
+    .seven
+      display: inline-block 
+      height: 40px 
+      line-height: 40px 
+      width: 142px 
+      background: #23ae37 
+      color: #fff 
+      cursor: pointer 
+      border-radius: 50px 
+      margin-top: 15px 
+      margin-left: -10px 
+  .s-2
+    position relative
+    padding 110px 80px 0
+    margin-bottom 40px
+    height 600px
+    background url("./img/line-2.png") no-repeat center
+    p
+      margin-bottom 10px
+    img:first-child
+      margin-right 100px
+    img
+      cursor pointer
+  .s-3
+    position relative
+    padding 110px 80px 0
+    margin-bottom 40px
+    height 370px
+    background url("./img/line-3.png") no-repeat center
+    width: 1000px 
+    margin: 0px auto 120px 
+    text-align: left 
+  .topic img
+    position absolute
+    left: 50% 
+    margin-left: -205px 
+    top: -28px 
+  .bold
+    font-weight bold
+  .trees
+    height 244px
+    color #fff
+    .item
+      float left
+      width 120px
+      height 230px
+      margin-right 10px
+      background #408152
+      p
+        line-height 2.5
+      img
+        margin 10px auto 15px
+      span
+        display block
+        height 44px
+        line-height 44px
+        width 100px
+        border-radius 40px
+        background #23ae37
+        margin 0 auto
+        font-size 16px
+        cursor pointer
+    .item.done
+      background #fd4b60
+      span
+        background #969696
+        color #343434
+    .item.can
+      background #fd4b60
+      span
+        background #fef201
+        color #7f0012
+@media screen and (max-width: 767px)
+  body
+    background: #0c0534
+    color: #fff
+    font-size: 35px
+    text-align: center
+    .chris
+      font-size 15px
+    .bg-wap.main
+      background: url(./img/j-bg-m.jpg) no-repeat top center #fff
+      padding-top: 220px
+      overflow: hidden
+      padding-bottom: 60px
+      background-size: contain
+      .s-1
+        p
+         line-height 1.5
+        .trees
+          margin 20px 0
+          overflow-x: auto
+          .tree-wrap
+            width 2000px
+            .item
+              padding-top 20px
+      .s-2
+        img:first-child
+          margin-right 0px
+      .section
+        background transparent
+        width 100%
+        height auto
+        padding 10px
+        overflow hidden
+        margin-bottom 20px
+      .topic
+        img
+          position inherit
+          left inherit
+          margin-left inherit
+          top inherit
+          width 100%

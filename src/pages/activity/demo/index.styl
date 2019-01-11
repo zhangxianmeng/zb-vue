@@ -1,0 +1,22 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+
+.bg-wap
+  position: relative
+  background: url(./img/bg1.jpg) no-repeat top center, url(./img/bg2.jpg) no-repeat top center
+  padding: 648px 0 100px
+  overflow: hidden
+  text-align center
+
+@media screen and (max-width: 767px)
+  body
+    background: #0c0534
+    color: #fff
+    font-size: 35px
+    text-align: center
+    .bg-wap.main
+      background: url(./img/bgm.jpg) no-repeat top center #fff
+      padding-top: 220px
+      overflow: hidden
+      padding-bottom: 60px
+      background-size: contain

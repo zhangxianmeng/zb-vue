@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div>
+  <img src="https://wg.shdunjiusy.com/randyTest/item1.jpg" alt="">
+  <img src="https://wg.shdunjiusy.com/randyTest/item2.jpg" alt="">
+  <img src="https://wg.shdunjiusy.com/randyTest/item3.jpg" alt="">
+  <img src="https://wg.shdunjiusy.com/randyTest/item4.jpg" alt="">
+  <img src="https://wg.shdunjiusy.com/randyTest/item5.jpg" alt="">
+  <img src="https://wg.shdunjiusy.com/randyTest/item6.jpg" alt="">
+  <img src="https://wg.shdunjiusy.com/randyTest/item7.jpg" alt="">
+  <img src="https://wg.shdunjiusy.com/randyTest/item8.jpg" alt="">
+</div>
+<div id="imgs"></div>
+<script>
+  function ajaxRequst(url, type, params) {
+    return new Promise(function (res) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(type, url, true);
+      xhr.setRequestHeader("Content-type", "application/json;charset=utf-8");
+      xhr.send(JSON.stringify(params));
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var result = xhr.responseText;
+          result = eval('(' + result + ')');
+          res(result);
+        }
+      };
+    });
+  }
+  ajaxRequst('/1.0/getAllLuckyDrawPresent', 'post', {}).then((res)=>{
+    if(res.code=== '0'){
+      let imgs = document.querySelector('#imgs')
+      res.data.forEach((item)=>{
+        let img = document.createElement('img')
+        img.src = item.imageUrl
+        imgs.appendChild(img)
+      })
+    }
+  })
+</script>
+</body>
+</html>

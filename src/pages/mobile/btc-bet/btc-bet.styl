@@ -1,0 +1,142 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.btc-bet
+  .content
+    mobile-wrapper()
+    background $color-gray-background !important
+    min-height: 100vh
+  .btc-user-header
+    background url("./img/btc-bg.jpg") no-repeat center
+    background-size cover
+    height 200px
+    text-align center
+    color $color-light
+    display flex
+    justify-content center
+    align-items center
+    .user-info
+      .balance
+        font-size 24px
+        margin-right 10px
+    .balance-line
+      display flex
+      justify-content center
+      align-items center
+      margin 15px 0
+    .mobile-select
+      line-height 30px
+      height 30px
+      background #0848fe
+      color #fecb20
+      border 0
+      option
+        border 0
+    .btn-group
+      margin-top 10px
+      span
+        display inline-block
+        background #fecb20
+        border 2px solid #fecb20
+        color $color-light
+        padding 10px 18px
+        font-size 14px
+        border-radius 20px
+        text-shadow 0 2px 1px #666
+        &:first-child
+          background transparent
+          border 2px solid #fecb20
+          color #fecb20
+          margin-right:10px
+  .flex-tab-wrapper
+    padding 15px 10px
+    background $color-light
+    margin-bottom 10px
+  .game-list-wrapper
+    background $color-gray-background
+  .search-input-wrapper
+    display flex
+    justify-content space-between
+    align-items center
+    margin-bottom 10px
+    .search-input
+      flex 1
+    .select-btn
+      flex 0 0 60px
+      width 60px
+      text-align right
+      extend-click()
+      margin-left 10px
+      i
+        font-size 20px
+  .btc-item-wrapper
+    padding 0 10px
+  .add-btn
+    text-align right
+    margin-bottom 10px
+  .account-log
+    display: flex
+    align-items center
+    justify-content center
+    margin-top 20px
+  #QRCode
+    margin-bottom 15px
+    display flex
+    justify-content center
+
+  .card-list
+    .item
+      background $color-light
+      color $color-light
+      border-radius 10px
+      box-shadow: 0px 3px 13px #999
+      padding 15px
+      margin-bottom 15px
+      background url("./img/btc.jpg") no-repeat center
+      background-size 120%
+      line-height 24px
+      &.eth
+        background-image url("./img/eth.jpg")
+      h3
+        font-size 18px
+        font-weight 600
+      h2
+        font-weight 600
+        margin 30px 0
+        text-align center
+        span
+          font-size 24px
+      .bottom
+        display flex
+        justify-content space-between
+        align-items center
+        button
+          margin-right 10px
+  .wallet-list
+    .item
+      .address
+        margin 15px 0
+
+
+  .btc-item-wrapper
+    background $color-light
+    padding 10px
+  .log-card-list
+    .item
+      box-shadow: 0px 3px 13px #999
+      border-radius 10px
+      margin-bottom 15px
+      line-height 28px
+      .title
+        background $color-gray-background
+        display flex
+        justify-content space-between
+        padding 0 15px
+        line-height 40px
+        span
+          font-weight 600
+
+      p
+        padding 4px 15px
+        display flex
+        justify-content space-between
+        align-items center
