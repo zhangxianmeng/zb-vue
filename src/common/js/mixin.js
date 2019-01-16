@@ -3666,7 +3666,13 @@ export const depositModule = {
                     value: 66,
                     minPay: 11,
                     maxPay: 3000000
-                  }
+                  },
+                  {
+                    showName: '通道2',
+                    value: 7,
+                    minPay: 11,
+                    maxPay: 3000000
+                  },
                 ],
                 tooltip: {
                   title: '支付宝充值说明',
@@ -4280,7 +4286,7 @@ export const depositPageModule = {
           ubankname = 'BANK_ICBC'
         }
         if (this.obj.payWayType === config.PAYWAY.zfbTransformPay) {
-          ubankname = 'ZFB_ABC'
+          ubankname = 'ZFB_PSBC'
         }
         if (this.obj.payWayType === config.PAYWAY.wxzzPay) {
           ubankname = 'WX_CCB'

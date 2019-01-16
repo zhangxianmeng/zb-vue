@@ -41,8 +41,8 @@ export default [
     component: index,
     children: [
       {
-        path:'/',
-        component:indexPage
+        path:'',
+        component:indexPage,
       },
       {
         path:'index',
